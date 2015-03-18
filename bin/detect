@@ -1,4 +1,4 @@
 #!/bin/sh
 
-echo "PhantomJS"
+echo "PhantomJS-W-Flash"
 exit 0
