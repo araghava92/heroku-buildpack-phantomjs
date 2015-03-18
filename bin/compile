@@ -25,10 +25,8 @@ mkdir -p $BUILD_DIR/vendor/phantomjs
 tar xjf $CACHE_DIR/$FILE_NAME -C $CACHE_DIR
 mv $CACHE_DIR/$ARCHIVE_NAME $BUILD_DIR/vendor/phantomjs
 echo "<!-------------------------"
-ls -a $CACHE_DIR/$ARCHIVE_NAME
 echo $BUILD_DIR
 echo $CACHE_DIR
-ls -a $BUILD_DIR/vendor/phantomjs
 echo "--------------------------->"
 
 echo "-----> exporting PATH and LIBRARY_PATH"
