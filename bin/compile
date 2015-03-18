@@ -30,4 +30,4 @@ echo "-----> exporting PATH and LIBRARY_PATH"
 PROFILE_PATH="$BUILD_DIR/.profile.d/phantomjs.sh"
 mkdir -p $(dirname $PROFILE_PATH)
 echo 'export PATH="$PATH:vendor/phantomjs/phantomjs-W-flash-1.9.8-linux-x86_64/phantomjs-1.9.8-linux-x86_64/bin"' >> $PROFILE_PATH
-echo 'export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:vendor/phantomjs-W-flash-1.9.8-linux-x86_64/phantomjs-1.9.8-linux-x86_64/phantomjs/lib"' >> $PROFILE_PATH
+echo 'export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:vendor/phantomjs/phantomjs-W-flash-1.9.8-linux-x86_64/phantomjs-1.9.8-linux-x86_64/lib"' >> $PROFILE_PATH
