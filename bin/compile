@@ -2,28 +2,8 @@
 
 set -e
 
-unction error() {
-  echo " !     $*" >&2
-  exit 1
-}
-
-function topic() {
-  echo "-----> $*"
-}
-
-function indent() {
-  c='s/^/       /'
-  case $(uname) in
-    Darwin) sed -l "$c";;
-    *)      sed -u "$c";;
-  esac
-}
-
-
 BUILD_DIR=$1
 CACHE_DIR=$2
-LP_DIR=`cd $(dirname $0); cd ..; pwd`
-
 
 
 # config
@@ -42,10 +22,6 @@ mkdir -p $CACHE_DIR/$ARCHIVE_NAME
 mkdir -p $BUILD_DIR/vendor/phantomjs
 tar xjf $CACHE_DIR/$FILE_NAME -C $CACHE_DIR/$ARCHIVE_NAME
 mv $CACHE_DIR/$ARCHIVE_NAME $BUILD_DIR/vendor/phantomjs
-
-echo "-----> Installing Dependancies"
-echo "-----> Installing libgstreamer-plugins-base0.10-0_0.10.28-1_amd64.deb"
-dpkg -i vendor/phantomjs/phantomjs-W-flash-1.9.8-linux-x86_64/phantomjs-1.9.8-linux-x86_64/libgstreamer-plugins-base0.10-0_0.10.28-1_amd64.deb
 
 echo "-----> exporting PATH and LIBRARY_PATH"
 PROFILE_PATH="$BUILD_DIR/.profile.d/phantomjs.sh"
