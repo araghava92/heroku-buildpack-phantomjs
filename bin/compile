@@ -14,6 +14,7 @@ ARCHIVE_NAME=phantomjs-W-flash-${VERSION}-linux-x86_64
 FILE_NAME=${ARCHIVE_NAME}.tar.bz2
 BUILDPACK_PHANTOMJS_PACKAGE=https://bitbucket.org/araghava92/phantomjs-w-flash/downloads/${FILE_NAME}
 
+# Fetches the pak if not there in cache
 mkdir -p $CACHE_DIR
 if ! [ -e $CACHE_DIR/$FILE_NAME ]; then
   echo "-----> Fetching PhantomJS ${VERSION} binaries at ${BUILDPACK_PHANTOMJS_PACKAGE}"
